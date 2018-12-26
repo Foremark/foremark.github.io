@@ -1,0 +1,158 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Foremark</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <meta name="viewport" content="width=900, initial-scale=1.0" />
+</head>
+<body>
+    <header></header>
+    <section class="hero">
+        <h1>Foremark</h1>
+        <div class="lead">
+            Write a beautiful and user-friendly <br /> document using a text editor.
+        </div>
+        <ul class="links">
+            <li>
+                <a href="#get-started">Get Started</a>
+            </li>
+            <li>
+                <a href="https://github.com/foremark"><i class="github"></i>GitHub</a>
+            </li>
+        </ul>
+        <nav>
+            <ul>
+                <li><a href="">Docs/Examples</a></li>
+                <li><a href="">Changelog</a></li>
+                <li><a href="https://github.com/foremark">GitHub</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="notice">
+        Foremark is currently under development — You will find many features incomplete or broken.
+    </section>
+    <section class="overview">
+        <div>
+            <p>
+                <b>Foremark</b> is a technology for writing a plain-text document which renders nicely on <b>a web browser</b>.
+            </p>
+            <p>
+                It does not require <b>a plugin</b>, <b>pre-compilation process</b>, or <b>dedicated viewer software</b>.
+            </p>
+            <figure class="window source">
+                <figcaption>Example.fm.xhtml</figcaption>
+                <pre>            **Hello!**
+
+Welcome to Foremark. It's a way to
+write a _stylized_ text document
+without a fuss.
+
+:::           .----------.
+::: Write --> | Document | --> Web Browser
+:::           '----------'</pre>
+            </figure>
+            <figure class="window rendered">
+                <figcaption>Example</figcaption>
+                <h1>Hello!</h1>
+                <p>
+                    Welcome to Foremark. It's a way to write a <i>stylized</i> text document without a fuss.
+                </p>
+                <p>
+                    <img src="assets/images/example_figure.svg" alt="">
+                </p>
+            </figure>
+        </div>
+    </section>
+    <section class="motivation">
+        <h1>Why Use Foremark?</h1>
+        <ul class="icons">
+            <li>
+                <i class="file"></i>
+                <p>
+                    <b>Text files</b> can be edited by any text editor of your choice. They also work very well with <b>a version control software</b>.
+                </p>
+            </li>
+            <li>
+                <i class="offline"></i>
+                <p>
+                    Foremark can fully operate without <b>an internet connection</b>. Just make sure to use <b>a self-contained bundle</b> (<code>foremark.bundle.js</code>) available <a href="">here</a>.
+                </p>
+            </li>
+        </ul>
+    </section>
+    <section class="getStarted" id="get-started">
+        <h1>Get Started</h1>
+        <p>
+            <b>Copy</b> the following code, <b>save</b> it as <code>hello.fm.xhtml</code>, and <b>open</b> it with a web browser.
+        </p>
+        <pre>&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">&lt;body>&lt;mf-text>&lt;![CDATA[
+
+                            <i>**Title**
+
+Welcome to Foremark. It's a way to write a _stylized_ text document without a fuss.
+
+:::           .----------.
+::: Write --> | Document | --> Web Browser
+:::           '----------'
+
+# Section
+
+## Subsection
+
+Content</i>
+
+]]&gt;&lt;/mf-text> &lt;!-- Foremark footer -->
+&lt;script src="https://unpkg.com/foremark/browser/foremark.js" data-rel="foremark" async="async" />
+&lt;style>mf-text{white-space:pre-wrap;font-family:monospace}&lt;/style>&lt;/body>&lt;/html></pre>
+        <p>
+            Next step: <a href="">Manual</a> <a href="">Reference Manual</a>
+        </p>
+    </section>
+    <section class="relatedProjects">
+        <h1>Credits to Other Projects</h1>
+        <ul class="icons">
+            <li>
+                <i class="markdown"></i>
+                <p>
+                    The formatting of Foremark pulls much inspiration from John Gruber’s <b>Markdown</b> while making many intentional changes.
+                </p>
+            </li>
+            <li>
+                <i class="markdeep"></i>
+                <p>
+                    Foremark was <b>heavily inspired</b> by Morgan McGuire’s <b>Markdeep</b>. It also includes a portion of Markdeep.
+                </p>
+            </li>
+            <li>
+                <i class="gear"></i>
+                <p>
+                    Rendering of <b>an ASCII diagram</b> is performed using a Rust library <b>Svgbob</b>.
+                </p>
+            </li>
+            <li>
+                <i class="katex"></i>
+                <p>
+                    <b>Displaying LaTeX equations</b> was made possible by a JavaScript library <b>KaTeX</b>.
+                </p>
+            </li>
+            <li>
+                <i class="webpack"></i>
+                <p>
+                    Foremark is built using <b>Webpack</b>. Its code splitting feature is essential for <b>lazy-loading various components</b>.
+                </p>
+            </li>
+            <li>
+                <i class="hljs"></i>
+                <p>
+                    <b>The code highlighting</b> feature is provided by a JavaScript library <b>Highlight.js</b>.
+                </p>
+            </li>
+        </ul>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>

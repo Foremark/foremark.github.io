@@ -1,0 +1,363 @@
+---
+---
+
+@import "_fonts";
+
+body, html {
+    background: #23232e;
+    color: #1f142e;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    hyphens: auto;
+    line-height: 1.5;
+
+    min-width: 1100px;
+    position: relative;
+}
+
+$screen-medium-max-width: 1100px;
+
+@media screen and (max-width: $screen-medium-max-width) {
+    body, html {
+        min-width: 900px;
+        font-size: 16px;
+    }
+}
+
+a[href] {
+    color: #3060e0;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+b {
+    font-weight: 500;
+}
+
+code, pre {
+    font-family: 'Source Code Pro';
+    font-size: 90%;
+    letter-spacing: -10%;
+}
+
+section {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+
+    > h1 {
+        font-weight: bold;
+        font-size: 180%;
+        color: #262126;
+        margin: 1.5em 0 1em;
+    }
+}
+
+section.hero {
+    height: 540px;
+    background: #765e58;
+    background: linear-gradient(0deg, rgba(77, 73, 86, 1) 0%, rgba(118, 94, 88, 1) 100%);
+    color: white;
+
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0; top: 0; right: 0; bottom: 0;
+        background: url(../images/hero_bg.png) 50% 50%;
+        background-size: 145px 251px;
+        opacity: 0.05;
+    }
+
+    h1 {
+        position: absolute;
+        left: calc(50% - 460px); top: 180px;
+        margin: 0;
+
+        color: transparent;
+        text-indent: -9999px;
+
+        width: 411px; height: 100px;
+        background: url(../images/logo.svg) no-repeat 50% 50%;
+    }
+
+    .lead {
+        position: absolute;
+        left: calc(50% + 20px); top: 180px;
+        margin: 0; box-sizing: border-box;
+        text-align: right;
+
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        font-family: Heuristica, serif;
+        font-style: italic;
+        font-size: 30px;
+    }
+
+    @media screen and (max-width: $screen-medium-max-width) {
+        h1 { left: calc(50% - 420px); }
+        .lead { font-size: 25px; top: 185px; left: calc(50% + 40px); }
+    }
+
+    > ul.links {
+        position: absolute;
+        left: 50%; top: 360px;
+        transform: translateX(-50%);
+        margin: 0; padding: 0;
+
+        > li {
+            list-style: none;
+            display: inline;
+        }
+        > li > a {
+            border: 1px solid white;
+            margin: 10px;
+            padding: 10px 30px;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+
+            transition: 200ms background-color;
+            &:hover {
+                background: rgba(255, 255, 255, 0.5);
+                transition: none;
+            }
+
+            > i.github {
+                display: inline-block;
+                width: 1.4em;
+                height: 1.4em;
+                vertical-align: -0.3em;
+                margin-right: 0.5em;
+                background: url(../images/icon_github.svg) 50% 50% no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+
+    > nav {
+        position: relative;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    > nav > ul {
+        position: absolute;
+        top: 30px; right: 10px;
+        margin: 0; padding: 0;
+
+        > li {
+            list-style: none;
+            display: inline;
+        }
+        > li > a {
+            padding: 10px 30px;
+            color: white;
+
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+
+            > i.github {
+                display: inline-block;
+                width: 1.4em;
+                height: 1.4em;
+                vertical-align: -0.3em;
+                margin-right: 0.5em;
+                background: url(../images/icon_github.svg) 50% 50% no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+}
+
+section.notice {
+    background: #703030;
+    color: #ddd;
+    padding: 10px 0;
+    font-weight: 500;
+}
+
+section.overview {
+    background: #cfcbd6;
+
+    padding-top: 2em;
+
+    > div {
+        max-width: 1100px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        grid-template-rows: 1fr min-content 1fr;
+        grid-template-areas: "win1 p1 win2"
+                             "win1 ar win2"
+                             "win1 p2 win2";
+        column-gap: 0;
+        row-gap: 1em;
+
+        > p:nth-of-type(1) { grid-area: p1; }
+        > p:nth-of-type(2) { grid-area: p2; }
+        > .window.source { grid-area: win1; }
+        > .window.rendered { grid-area: win2; }
+        > .window { align-self: center; }
+        &:before { grid-area: ar; }
+
+        &:before {
+            content: "";
+            display: block;
+            background: url(../images/arrow.svg) 50% 50% no-repeat;
+            background-size: contain;
+            height: 100px;
+
+        }
+
+        > p {
+            font-size: 115%;
+            padding: 0 50px;
+            @media screen and (max-width: $screen-medium-max-width) {
+                padding: 0 20px;
+            }
+        }
+
+        .window {
+            background: #E2DFE8 url(../images/window_buttons.svg) 10px 10px no-repeat;
+            border-radius: 10px;
+            font-size: 90%;
+            text-align: left;
+            padding: 0 20px 10px 20px;
+            margin: 0 20px;
+
+            > figcaption {
+                text-align: center;
+                margin: 10px 0 20px;
+                padding-left: 40px;
+            }
+
+            @media screen and (max-width: $screen-medium-max-width) {
+                background-size: (78px * 0.8) (21px * 0.8);
+                > figcaption {
+                    padding-left: 20px;
+                    margin-top: 8px;
+                }
+            }
+
+            p, h1 {
+                font-family: 'Source Serif Pro', serif;
+                margin: 0.5em 0;
+            }
+            h1 {
+                font-weight: normal;
+                font-size: 170%;
+            }
+            pre {
+                overflow: auto;
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+section.motivation {
+    background: #cfcbd6;
+}
+
+section.getStarted {
+    background: #ebebf2;
+
+    pre {
+        display: inline-block;
+        text-align: left;
+        border: 2px solid rgba(94, 67, 94, 0.1);
+        padding: 20px;
+
+        border-radius: 10px;
+        color: #777;
+
+        @media screen and (max-width: $screen-medium-max-width) {
+            font-size: 80%;
+        }
+
+        > i {
+            color: #333;
+            font-style: normal;
+            font-weight: bold;
+        }
+    }
+
+    p > a {
+        margin-left: 1em;
+    }
+}
+
+section.relatedProjects {
+    background: #cfcbd6;
+
+    ul.icons { flex-wrap: wrap; }
+    ul.icons > li { width: 33%; min-width: 350px; }
+}
+
+ul.icons {
+    display: flex;
+    margin: 2em auto;
+    padding: 0 1em;
+    max-width: 1200px;
+    > li {
+        list-style: none;
+        flex: 1;
+
+        display: flex;
+        align-items: center;
+        min-height: 170px;
+
+        padding: 0 1em;
+        box-sizing: border-box;
+
+        > i {
+            display: block;
+            border-radius: 50%;
+            background: #ebe8f2;
+            width: 93px;
+            height: 93px;
+
+            position: relative;
+            &:before {
+                content: ""; position: absolute;
+                left: 0; top: 0; right: 0; bottom: 0;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            }
+            &.file:before { background-image: url(../images/icon_file.svg); }
+            &.offline:before { background-image: url(../images/icon_offline.svg); }
+            &.markdown:before { background-image: url(../images/icon_markdown.svg); }
+            &.markdeep:before { background-image: url(../images/icon_markdeep.svg); }
+            &.gear:before { background-image: url(../images/icon_gear.svg); }
+            &.katex:before { background-image: url(../images/icon_katex.svg); }
+            &.webpack:before { background-image: url(../images/icon_webpack.svg); }
+            &.hljs:before { background-image: url(../images/icon_hljs.svg); }
+        }
+        > p {
+            flex: 1;
+
+            overflow: hidden;
+            padding: 0 0 0 1em;
+            margin: 0;
+            text-align: left;
+            line-height: 1.4;
+        }
+    }
+}
+
+footer {
+    background: url(../images/logo_small.svg) 50% 50% no-repeat;
+    height: 95px;
+}
