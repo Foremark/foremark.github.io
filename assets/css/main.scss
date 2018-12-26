@@ -269,6 +269,9 @@ section.overview {
 
 section.motivation {
     background: #cfcbd6;
+
+    ul.icons { flex-wrap: wrap; }
+    ul.icons > li { min-width: 45%; }
 }
 
 section.getStarted {
@@ -344,6 +347,7 @@ ul.icons {
             &.katex:before { background-image: url(../images/icon_katex.svg); }
             &.webpack:before { background-image: url(../images/icon_webpack.svg); }
             &.hljs:before { background-image: url(../images/icon_hljs.svg); }
+            &.share:before { background-image: url(../images/icon_share.svg); }
         }
         > p {
             flex: 1;
