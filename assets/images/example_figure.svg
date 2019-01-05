@@ -21,7 +21,8 @@
 </defs>
 <style type="text/css">
 svg {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Source Code Pro', serif;
+    letter-spacing: -0.038em;
 }
 
 .fg_fill {
