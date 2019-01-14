@@ -5,5 +5,5 @@
     let script = document.createElement('script');
     script.src = 'https://unpkg.com/foremark/browser/foremark.js';
     script.setAttribute('data-rel', 'foremark');
-    document.body.appendChild(script);
+    document.getElementsByTagName('html')[0].appendChild(script);
 })();
