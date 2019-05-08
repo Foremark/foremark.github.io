@@ -4,7 +4,7 @@
 @import "_fonts";
 
 body, html {
-    background: #23232e;
+    background: #2e1d1d;
     color: #1f142e;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
@@ -60,24 +60,15 @@ section {
 }
 
 section.hero {
-    height: 540px;
-    background: #765e58;
-    background: linear-gradient(0deg, rgba(77, 73, 86, 1) 0%, rgba(118, 94, 88, 1) 100%);
+    height: 500px;
+    background: #39468f;
     color: white;
 
     position: relative;
-    &:before {
-        content: "";
-        position: absolute;
-        left: 0; top: 0; right: 0; bottom: 0;
-        background: url(../images/hero_bg.png) 50% 50%;
-        background-size: 145px 251px;
-        opacity: 0.05;
-    }
 
     h1 {
         position: absolute;
-        left: calc(50% - 460px); top: 180px;
+        left: calc(50% - 460px); top: 160px;
         margin: 0;
 
         color: transparent;
@@ -89,7 +80,7 @@ section.hero {
 
     .lead {
         position: absolute;
-        left: calc(50% + 20px); top: 180px;
+        left: calc(50% + 20px); top: 160px;
         margin: 0; box-sizing: border-box;
         text-align: right;
 
@@ -108,7 +99,7 @@ section.hero {
 
     > ul.links {
         position: absolute;
-        left: 50%; top: 360px;
+        left: 50%; top: 340px;
         transform: translateX(-50%);
         margin: 0; padding: 0;
 
@@ -119,7 +110,7 @@ section.hero {
         > li > a {
             border: 1px solid white;
             margin: 10px;
-            padding: 10px 30px;
+            padding: 15px 25px;
             color: white;
             text-decoration: none;
             border-radius: 6px;
@@ -186,7 +177,7 @@ section.notice {
 }
 
 section.overview {
-    background: #cfcbd6;
+    background: #dacec9;
 
     padding-top: 2em;
 
@@ -268,7 +259,7 @@ section.overview {
 }
 
 section.motivation {
-    background: #cfcbd6;
+    background: #dacec9;
 
     ul.icons { flex-wrap: wrap; }
     ul.icons > li { min-width: 45%; }
@@ -303,10 +294,11 @@ section.getStarted {
 }
 
 section.relatedProjects {
-    background: #cfcbd6;
+    background: #e3e0df;
 
     ul.icons { flex-wrap: wrap; }
     ul.icons > li { width: 33%; min-width: 350px; }
+    ul.icons > li > i { background: #f2f2f2; }
 }
 
 ul.icons {
