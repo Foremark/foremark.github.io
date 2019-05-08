@@ -94,7 +94,7 @@ section.hero {
 
     @media screen and (max-width: $screen-medium-max-width) {
         h1 { left: calc(50% - 420px); }
-        .lead { font-size: 25px; top: 185px; left: calc(50% + 40px); }
+        .lead { font-size: 25px; top: 165px; left: calc(50% + 40px); }
     }
 
     > ul.links {
@@ -170,10 +170,18 @@ section.hero {
 }
 
 section.notice {
-    background: #703030;
-    color: #ddd;
-    padding: 10px 0;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px;
     font-weight: 500;
+    position: absolute;
+    box-sizing: border-box;
+    display: inline-block;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }
 
 section.overview {
