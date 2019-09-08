@@ -4,7 +4,7 @@
 @import "_fonts";
 
 body, html {
-    background: #2e1d1d;
+    background: #222;
     color: #1f142e;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
@@ -61,8 +61,8 @@ section {
 
 section.hero {
     height: 500px;
-    background: #39468f;
-    color: white;
+    background: #eee;
+    color: #040404;
 
     position: relative;
 
@@ -85,7 +85,7 @@ section.hero {
         text-align: right;
 
         padding: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(4, 4, 4, 0.2);
 
         font-family: Heuristica, serif;
         font-style: italic;
@@ -108,16 +108,16 @@ section.hero {
             display: inline;
         }
         > li > a {
-            border: 1px solid white;
+            border: 1px solid #040404;
             margin: 10px;
             padding: 15px 25px;
-            color: white;
+            color: #040404;
             text-decoration: none;
             border-radius: 6px;
 
             transition: 200ms background-color;
             &:hover {
-                background: rgba(255, 255, 255, 0.5);
+                background: rgba(4, 4, 4, 0.2);
                 transition: none;
             }
 
@@ -149,7 +149,7 @@ section.hero {
         }
         > li > a {
             padding: 10px 30px;
-            color: white;
+            color: #040404;
 
             text-decoration: none;
             &:hover {
@@ -170,8 +170,8 @@ section.hero {
 }
 
 section.notice {
-    border-bottom: 1px solid white;
-    color: white;
+    border-bottom: 1px dotted #ccc;
+    color: #666;
     padding: 5px 10px;
     margin: 10px;
     font-weight: 500;
@@ -185,9 +185,10 @@ section.notice {
 }
 
 section.overview {
-    background: #dacec9;
+    background: #fafafa;
 
     padding-top: 2em;
+    padding-bottom: 2em;
 
     > div {
         max-width: 1100px;
@@ -214,8 +215,7 @@ section.overview {
             display: block;
             background: url(../images/arrow.svg) 50% 50% no-repeat;
             background-size: contain;
-            height: 100px;
-
+            height: 70px;
         }
 
         > p {
@@ -227,8 +227,9 @@ section.overview {
         }
 
         .window {
-            background: #E2DFE8 url(../images/window_buttons.svg) 10px 10px no-repeat;
-            border-radius: 10px;
+            background: transparent url(../images/window_buttons.svg) 10px 10px no-repeat;
+            border: 0.5px solid #aaa;
+            border-radius: 8px;
             font-size: 90%;
             text-align: left;
             padding: 0 20px 10px 20px;
@@ -267,14 +268,14 @@ section.overview {
 }
 
 section.motivation {
-    background: #dacec9;
+    background: #eee;
 
     ul.icons { flex-wrap: wrap; }
     ul.icons > li { min-width: 45%; }
 }
 
 section.getStarted {
-    background: #ebebf2;
+    background: #fafafa;
     padding: 2em 0;
 
     pre {
@@ -303,11 +304,10 @@ section.getStarted {
 }
 
 section.relatedProjects {
-    background: #e3e0df;
+    background: #eee;
 
     ul.icons { flex-wrap: wrap; }
     ul.icons > li { width: 33%; min-width: 350px; }
-    ul.icons > li > i { background: #f2f2f2; }
 }
 
 ul.icons {
@@ -329,7 +329,7 @@ ul.icons {
         > i {
             display: block;
             border-radius: 50%;
-            background: #ebe8f2;
+            background: #fafafa;
             width: 93px;
             height: 93px;
 
