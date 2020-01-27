@@ -6,7 +6,7 @@
 body, html {
     background: #222;
     color: #1f142e;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Overpass', sans-serif;
     font-weight: 400;
     font-size: 18px;
     margin: 0;
@@ -14,6 +14,7 @@ body, html {
     -webkit-font-smoothing: antialiased;
     hyphens: auto;
     line-height: 1.5;
+    letter-spacing: -0.03em;
 
     min-width: 1100px;
     position: relative;
@@ -37,11 +38,11 @@ a[href] {
 }
 
 b {
-    font-weight: 500;
+    font-weight: 700;
 }
 
 code, pre {
-    font-family: 'Source Code Pro';
+    font-family: 'Overpass Mono';
     font-size: 90%;
     letter-spacing: -10%;
 }
@@ -85,10 +86,9 @@ section.hero {
         text-align: right;
 
         padding: 10px;
-        border: 1px solid rgba(4, 4, 4, 0.2);
 
-        font-family: Heuristica, serif;
         font-style: italic;
+        font-weight: 200;
         font-size: 30px;
     }
 
@@ -250,7 +250,7 @@ section.overview {
             }
 
             p, h1 {
-                font-family: 'Source Serif Pro', serif;
+                font-family: 'Times New Roman', serif;
                 margin: 0.5em 0;
             }
             h1 {

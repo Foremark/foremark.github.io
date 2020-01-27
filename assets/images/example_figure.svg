@@ -21,7 +21,7 @@
 </defs>
 <style type="text/css">
 svg {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Consolas', 'Andale Mono', 'Monaco', monospace;
     letter-spacing: -0.038em;
 }
 
